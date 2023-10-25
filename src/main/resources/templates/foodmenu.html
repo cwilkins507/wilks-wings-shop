@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<link rel="stylesheet" th:href="@{/app.css}"/>
+<head>
+    <meta charset="UTF-8"/>
+
+    <title>Food Menu</title>
+
+</head>
+<body>
+<nav class="nav-bar">
+    <ul>
+        <li><a href="/" class="pull-left">
+            <img src="/images/logo.jpeg" alt="logo" class="homelogo"></a></li>
+        <li><a href="/foodmenu">Food Menu</a></li>
+        <li><a href="/drinkmenu">Drink Menu</a></li>
+        <li><a href="/contactus">Contact Us</a></li>
+        <li><a href="/reservations">Reservations</a></li>
+    </ul>
+</nav>
+<h1>Food Menu</h1>
+<!-- where food in menu is added-->
+<div class="menu-container">
+    <div class="row">
+        <div th:each="food: ${foodmenu}" class="menu-container">
+            <a th:href="'/food/' + ${food.name}" th:text="${food.name}"></a>
+            <span>.......................................................</span>
+            <a th:href="'/food/' + ${food.price}" th:text="${food.price}"></a>
+            </a>
+        </div>
+    </div>
+    <p>*** Indicates Customer Favorite </p>
+    <p>!!DISCLAIMER Punch Yo Momma hot requires a waiver!!</p>
+    <p>If you can complete the challenge, you will be featured on our wall</p>
+</div>
+<div class="footer">
+    <footer>
+        <p style="color:white"> Made by Collin-Wilkins</p>
+    </footer>
+</div>
+</body>
+</html>

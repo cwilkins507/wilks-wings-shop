@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" th:href="@{/app.css}" />
+    <title>Drink Menu</title>
+
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="/" class="pull-left">
+            <img src="/images/logo.jpeg" alt="logo" class="homelogo"></a></li>
+        <li><a href="/foodmenu">Food Menu</a></li>
+        <li><a href="/drinkmenu">Drink Menu</a></li>
+        <li><a href="/contactus">Contact Us</a></li>
+        <li><a href="/reservations">Reservations</a></li>
+    </ul>
+</nav>
+<h1>Drink Menu</h1>
+<div class="menu container">
+    <div class="row">
+        <div th:each= "drink: ${drinkmenu}" class="menu-container">
+            <a th:href="'/drink/' + ${drink.type}" th:text="${drink.type}"></a>
+            <span>..........................................................</span>
+            <a th:href="'/drink/' + ${drink.price}" th:text="${drink.price}"></a>
+            <!--            <img th:src="@{'/gifs/' + ${gif.name} + '.gif'}" alt="Favorite Gifs"/>-->
+            <!--            <a href="#" th:class="(${gif.favorite} ? 'un' : '') + 'mark favorite'"></a>-->
+            </a>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <footer>
+        <p style="color:white"> Made by Collin-Wilkins</p>
+    </footer>
+</div>
+</body>
+</html>

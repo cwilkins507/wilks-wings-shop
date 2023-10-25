@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" th:href="@{/app.css}" />
+    <title>Reservations</title>
+</head>
+
+<body>
+<nav>
+    <ul>
+        <li><a href="/" class="pull-left">
+            <img src="/images/logo.jpeg" alt="logo" class="homelogo"></a></li>
+        <li><a href="/foodmenu">Food Menu</a></li>
+        <li><a href="/drinkmenu">Drink Menu</a></li>
+        <li><a href="/contactus">Contact Us</a></li>
+        <li><a href="/reservations">Reservations</a></li>
+    </ul>
+</nav>
+<h1>Reservations</h1>
+<h2>We accept reservations for parties of 6 or more</h2>
+<form style="text-align: center">
+    <p><input type="text" placeholder="Name"></p>
+    <p><input type="number" placeholder="Party Size"></p>
+    <p><input type="datetime-local" placeholder="Date and Time"></p>
+    <p><button type="submit">Submit</button></p>
+</form>
+<div class="footer">
+    <footer>
+        <p style="color:white"> Made by Collin-Wilkins</p>
+    </footer>
+</div>
+</body>
+</html>
